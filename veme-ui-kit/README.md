@@ -25,3 +25,9 @@ To use the Button Component:
     <app-button label="Primary Button" type="primary"></app-button>
     <app-button label="Secondary Button" type="secondary"></app-button>
 ```
+
+## Constributing
+Contributions are welcome! Please open an issue or submit a PR
+
+## License
+This project is licensed under the MIT License
