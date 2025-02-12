@@ -1,4 +1,4 @@
-<div class="rounded max-w-sm overflow-hidden shadow-lg bg-white">
+<div [ngClass]="['rounded max-w-sm overflow-hidden shadow-lg bg-white', cardClass]">
     <img [src]="imageUrl" alt="Card Image" class="w-full">
 
     <div class="px-6 py-4">
@@ -9,7 +9,7 @@
         </p>
 
         <div class="px-6 py-4">
-            <app-button [label]="buttonText" [type]="buttonType">
+            <app-button [label]="buttonText" [type]="buttonType" (click)="buttonClick.emit()">
             </app-button>
         </div>
     </div>

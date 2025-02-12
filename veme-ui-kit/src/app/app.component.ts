@@ -12,4 +12,8 @@ import { CardComponent } from './components/card/card.component';
 })
 export class AppComponent {
   title = 'veme-ui-kit';
+
+  onButtonClick() {
+    alert('Button Clicked');
+  }
 }
