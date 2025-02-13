@@ -5,8 +5,6 @@ import { CardComponent } from './components/card/card.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, ButtonComponent, CardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
