@@ -9,6 +9,15 @@
     buttonText="Click Me" 
     buttonType="primary"
     cardClass="border-2 border-blue-500"
-    (buttonClick)="onButtonClick()">
+    (buttonClick)="onButtonClick()"
     >
+
 </app-card>
+
+<div class="flex justify-center">
+    <app-button label="Open Modal" type="primary" (click)="isModalOpen = true"></app-button>
+</div>
+
+<app-modal title="New Custom Modal" [isOpen]="isModalOpen" (closeModal)="isModalOpen = false">
+    <p>Modal Content, Anything can go here</p>
+</app-modal>

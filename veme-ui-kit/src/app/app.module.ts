@@ -7,21 +7,23 @@ import { ButtonComponent } from './components/button/button.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { app } from '../../server';
 import { share } from 'rxjs';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    
+  ],
+  imports: [
     CardComponent,
     ButtonComponent,
     ModalComponent,
-  ],
-  imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [],
 })
 export class AppModule { }
