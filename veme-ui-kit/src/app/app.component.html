@@ -1,4 +1,4 @@
-<h1 class="">VEME UI KIT</h1>
+<h1 class="text-3xl font-bold underline text-center my-8">VEME UI KIT</h1>
 <app-button label="Primary Button" type="primary"></app-button>
 <app-button label="Secondary Button" type="secondary"></app-button>
 
@@ -21,3 +21,15 @@
 <app-modal title="New Custom Modal" [isOpen]="isModalOpen" (closeModal)="isModalOpen = false">
     <p>Modal Content, Anything can go here</p>
 </app-modal>
+
+
+<!-- INPUT COMPONENT -->
+
+<!-- Input Component -->
+<div class="max-w-md mx-auto">
+  <app-input 
+    label="Username" 
+    placeholder="Enter your username" 
+    (inputChange)="onInputChange($event)"
+  ></app-input>
+</div>

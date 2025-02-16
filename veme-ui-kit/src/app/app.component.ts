@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from './shared/shared.module';
 import { ModalComponent } from './components/modal/modal.component';
+import { InputComponent } from './components/input/input.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { ModalComponent } from './components/modal/modal.component';
     SharedModule,
     ModalComponent,
     CardComponent,
-    ButtonComponent
+    ButtonComponent,
+    InputComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -26,5 +28,9 @@ export class AppComponent {
 
   onButtonClick() {
     alert('Button Clicked');
+  }
+
+  onInputChange(value: string) {
+    console.log('Input value:', value);
   }
 }
