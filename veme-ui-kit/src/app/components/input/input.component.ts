@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { InputService } from '../../services/input.service';
 
 @Component({
   selector: 'app-input',
@@ -14,8 +15,10 @@ export class InputComponent {
   @Input() type: string = 'text';
   @Output() inputChange = new EventEmitter<string>()
 
+  constructor(private inputService: InputService) {}
+
   onInputChange(event: Event) {
     const value = (event.target as HTMLInputElement).value;
-    this.inputChange.emit(value);
+    this.inputService.updateValue(value);
   }
 }

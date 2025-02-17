@@ -30,6 +30,9 @@
   <app-input 
     label="Username" 
     placeholder="Enter your username" 
-    (inputChange)="onInputChange($event)"
   ></app-input>
+
+  <div class="max-w-md mx-auto mt-4">
+    <p class="text-gray-700">You entered: {{ username }}</p>
+  </div>
 </div>
