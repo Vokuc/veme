@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from './shared/shared.module';
 import { ModalComponent } from './components/modal/modal.component';
 import { InputComponent } from './components/input/input.component';
+import { InputService } from './services/input.service';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,15 @@ import { InputComponent } from './components/input/input.component';
 export class AppComponent {
   title = 'veme-ui-kit';
   isModalOpen = false;
+  username: string = '';
+  
+  constructor(private inputService: InputService) {}
+
+  ngOnInit() {
+    this.inputService.currentValue.subscribe(value => {
+      this.username = value;
+    });
+  }
 
   onButtonClick() {
     alert('Button Clicked');
