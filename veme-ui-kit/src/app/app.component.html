@@ -36,3 +36,16 @@
     <p class="text-gray-700">You entered: {{ username }}</p>
   </div>
 </div>
+
+<!-- DROPDOWN COMPONENT -->
+<div class="max-w-md mx-auto">
+  <app-dropdown 
+    label="Choose a fruit" 
+    [items]="fruits" 
+    (itemSelected)="onItemSelected($event)"
+  ></app-dropdown>
+</div>
+
+<div class="max-w-md mx-auto mt-4">
+  <p class="text-gray-700">You selected: {{ selectedFruit }}</p>
+</div>

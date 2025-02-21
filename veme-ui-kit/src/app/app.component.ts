@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { ModalComponent } from './components/modal/modal.component';
 import { InputComponent } from './components/input/input.component';
 import { InputService } from './services/input.service';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { InputService } from './services/input.service';
     ModalComponent,
     CardComponent,
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    DropdownComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -27,6 +29,9 @@ export class AppComponent {
   title = 'veme-ui-kit';
   isModalOpen = false;
   username: string = '';
+
+  fruits: string[] = ['Apple', 'Banana', 'Orange', 'Mango'];
+  selectedFruit: string = '';
   
   constructor(private inputService: InputService) {}
 
@@ -42,5 +47,10 @@ export class AppComponent {
 
   onInputChange(value: string) {
     console.log('Input value:', value);
+  }
+
+
+  onItemSelected(item: string) {
+    this.selectedFruit = item;
   }
 }
